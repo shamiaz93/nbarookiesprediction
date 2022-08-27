@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NBA Rookies prediction</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <h1>Predictor</h1>
+    <br>
+    <form method="post" action="/predict">
+    <div class="row">
+        <div class="col">
+            <label class="form-label">GP:</label>
+            <input type="text" class="form-control" name="GP" placeholder="GP" aria-label="GP" value="35">
+            <div class="form-text">
+                Games played during rookie season
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">MIN:</label>
+            <input type="text" class="form-control" name="MIN" placeholder="MIN" aria-label="MIN" value="26.9">
+            <div class="form-text">
+                Average minutes played per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">PTS:</label>
+            <input type="text" class="form-control" name="PTS" placeholder="PTS" aria-label="PTS" value="7.2">
+            <div class="form-text">
+                Average points per game
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">FGM:</label>
+            <input type="text" class="form-control" name="FGM" placeholder="FGM" aria-label="FGM" value="2">
+            <div class="form-text">
+                Average field goals made per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">FGA:</label>
+            <input type="text" class="form-control" name="FGA" placeholder="FGA" aria-label="FGA" value="6.7">
+            <div class="form-text">
+                Average field goals attempted per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">FG:</label>
+            <input type="text" class="form-control" name="FG" placeholder="FG" aria-label="FG%" value="29.6">
+            <div class="form-text">
+                Average field goal percentage
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">3P Made:</label>
+            <input type="text" class="form-control" name="ThreePMade" placeholder="3P Made" aria-label="3P Made" value="0.7">
+            <div class="form-text">
+                Average 3-point field goals made per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">3PA:</label>
+            <input type="text" class="form-control" name="ThreePA" placeholder="3PA" aria-label="3PA" value="2.8">
+            <div class="form-text">
+                Average 3-point field goals attempted per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">3P%:</label>
+            <input type="text" class="form-control" name="ThreeP" placeholder="3P%" aria-label="3P%" value="23.5">
+            <div class="form-text">
+                3-point percentage
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">FTM:</label>
+            <input type="text" class="form-control" name="FTM" placeholder="FTM" aria-label="FTM" value="2.6">
+            <div class="form-text">
+                Average free throws made per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">FTA:</label>
+            <input type="text" class="form-control" name="FTA" placeholder="FTA" aria-label="FTA" value="3.4">
+            <div class="form-text">
+                Average free throws attempted per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">FT%:</label>
+            <input type="text" class="form-control" name="FT" placeholder="FT%" aria-label="FT%" value="76.5">
+            <div class="form-text">
+                Free throw percentage
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">OREB:</label>
+            <input type="text" class="form-control" name="OREB" placeholder="OREB" aria-label="OREB" value="0.5">
+            <div class="form-text">
+                Average offensive rebounds per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">DREB:</label>
+            <input type="text" class="form-control" name="DREB" placeholder="DREB" aria-label="DREB" value="2">
+            <div class="form-text">
+                Average defensive rebound per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">REB:</label>
+            <input type="text" class="form-control" name="REB" placeholder="REB" aria-label="REB" value="2.4">
+            <div class="form-text">
+                Average total rebounds per game
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col">
+            <label class="form-label">AST:</label>
+            <input type="text" class="form-control" name="AST" placeholder="AST" aria-label="AST" value="3.7">
+            <div class="form-text">
+                Average assists per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">STL:</label>
+            <input type="text" class="form-control" name="STL" placeholder="STL" aria-label="STL" value="1.1">
+            <div class="form-text">
+                .
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">BLK:</label>
+            <input type="text" class="form-control" name="BLK" placeholder="BLK" aria-label="BLK" value="0.5">
+            <div class="form-text">
+                Average blocks per game
+            </div>
+        </div>
+        <div class="col">
+            <label class="form-label">TOV:</label>
+            <input type="text" class="form-control" name="TOV" placeholder="TOV" aria-label="TOV" value="1.6">
+            <div class="form-text">
+                Average turnovers per game
+            </div>
+        </div>
+    </div>
+        <br>
+        <div class="row">
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </div>
+    </form>
+    <br>
+
+    {% if result %}
+        <p class="lead"><b>{{ result }}</b></p>
+    {% endif %}
+</div>
+<br>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
